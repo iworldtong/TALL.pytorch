@@ -88,7 +88,7 @@ class TrainDataset(torch.utils.data.Dataset):
         # read sliding windows, and match them with the groundtruths to make training samples
         sliding_clips_tmp = os.listdir(self.sliding_dir)
         self.clip_sentence_pairs_iou = []
-        for clip_name in sliding_clips_tmp[:5000]:
+        for clip_name in sliding_clips_tmp:
             if clip_name.split(".")[2]=="npy":
                 movie_name = clip_name.split("_")[0]
                 for clip_sentence in self.clip_sentence_pairs:
